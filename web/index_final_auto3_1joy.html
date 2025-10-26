@@ -51,13 +51,12 @@
     /* ======= LAYOUT (desktop/tablet) ======= */
     .dashboard {
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr 1fr;  /* ⬅️ dues columnes */
       grid-template-areas:
-        ".      camera joyR"
-        ".      .      labR"
-        ".      .      velR"
-        ".      .      omegaR"
-        "map    map    pos";
+        "camera joyR"
+        "map    labR"
+        "map    velR"
+        "pos    omegaR";
       align-items: center;
       justify-items: center;
       gap: var(--gap);
@@ -84,7 +83,7 @@
     }
 
     /* Mapa més ample però responsiu */
-    .map-display { width: min(360px, 100%); }
+    .map-display { width: min(280px, 100%); }
 
     /* Joystick */
     .joystick-container {
@@ -224,7 +223,7 @@
     let cmdVelTopic;
 
     // --- Configuració ---
-    const MAP_RESOLUTION = 0.05; // m/píxel (escala del teu mapa)
+    const MAP_RESOLUTION = 0.02; // m/píxel (escala del teu mapa en my_map.yaml)
     const ROBOT_RADIUS = 5;      // píxels (al canvas)
     const SPEED_VECTOR_SCALE = 50; // píxels per (m/s) per la fletxa de velocitat
 
