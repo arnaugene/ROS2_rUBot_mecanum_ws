@@ -11,9 +11,9 @@ class RobotSelfControl(Node):
         super().__init__('robot_selfcontrol_node')
 
         # Configurable parameters
-        self.declare_parameter('distance_laser', 0.3)
-        self.declare_parameter('speed_factor', 1.0)
-        self.declare_parameter('forward_speed', 0.2)
+        self.declare_parameter('distance_laser', 0.4)
+        self.declare_parameter('speed_factor', 0.01)
+        self.declare_parameter('forward_speed', 0.1)
         self.declare_parameter('rotation_speed', 0.3)
         self.declare_parameter('time_to_stop', 5.0)
 
